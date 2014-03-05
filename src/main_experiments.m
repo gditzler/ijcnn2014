@@ -1,6 +1,4 @@
 %% set paths
-addpath('~/Git/IncrementalLearning/src/');
-addpath('~/Git/data/matlab/concept-drift/');
 s = RandStream('mcg16807','Seed',0);
 RandStream.setGlobalStream(s);
 %% choose data 
