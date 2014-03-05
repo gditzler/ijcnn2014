@@ -1,7 +1,23 @@
-%% set paths
+%     main_experiment.m
+%     Copyright (C) 2014 Gregory Ditzler
+% 
+%     This program is free software: you can redistribute it and/or modify
+%     it under the terms of the GNU General Public License as published by
+%     the Free Software Foundation, either version 3 of the License, or
+%     (at your option) any later version.
+% 
+%     This program is distributed in the hope that it will be useful,
+%     but WITHOUT ANY WARRANTY; without even the implied warranty of
+%     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%     GNU General Public License for more details.
+% 
+%     You should have received a copy of the GNU General Public License
+%     along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+% set paths
 s = RandStream('mcg16807','Seed',0);
 RandStream.setGlobalStream(s);
-%% choose data 
+% choose data 
 clc; clear; 
 close all;
 dat = 'elec2';
@@ -63,7 +79,8 @@ end
 
 [data_train,data_test,labels_train,labels_test] = test_then_train(alldata, ...
   allclass, win_size);
-%% run algorithms
+
+% run algorithms
 disp([' Running FTL on ', dat])
 model.type = 'CART';          % base classifier
 netFTL.mclass = mclass;               % number of classes in the prediciton problem
