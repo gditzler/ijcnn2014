@@ -17,8 +17,8 @@ if strcmp(dat,'noaa')
   mclass = 2;
 elseif strcmp(dat,'elec2')
   load elec2;
-  %alldata(3,:) = []; % remove the "cheating" features
-  %alldata(4,:) = []; 
+  alldata(3,:) = []; % remove the "cheating" features
+  alldata(4,:) = []; 
   win_size = 125;    % size of train / test batch
   alldata = alldata';   % old format of data needs transpose
   allclass = allclass'; % ^^^^^
